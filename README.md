@@ -39,6 +39,7 @@ of your sources:
 -D__AVR_ATmegaXXXX__ -mmcu=atmegaXXXX
 ```
 ...and the following `avr-gcc` flags after your sources:
+
 `-lneurapp-mXXXX -lneur-mXXXX`
 
 * When compiling for an emulated target, add the following `g++` flags ahead
@@ -48,7 +49,8 @@ of your sources:
 -O2 -std=c++11 -pthread
 -D__AVR_ATmegaXXXX__
 ```
-...and the following `avr-gcc` flags after your sources:
+...and the following `g++` flags after your sources:
+
 `-lneurapp-mXXXX-emu -lneur-mXXXX-emu`
 
 
