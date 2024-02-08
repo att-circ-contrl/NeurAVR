@@ -1,0 +1,28 @@
+Digital and analog pins follow the conventions of the USE SyncBox for the
+ATmega2560 and of the NeuroCam GPIO box for the ATmega328p.
+
+
+For the 2560:
+
+- The 8-bit digital bank maps H3..H6 to Dig0..Dig3 and B4..B7 to Dig4..Dig7.
+This corresponds to Arduino Mega 2560 r3 Dig6..Dig13.
+
+- The 16-bit digital bank maps L0..L7 to Dig8..Dig15 and C0..C7 to
+Dig16..Dig23. This corresponds to Arduino Mega 2560 r3 Dig49..42 and Dig37..30.
+
+- There are 8 analog channels mapped: ADC0..ADC7. This corresponds to
+Arduino Mega 2560 r3 Ain0..Ain7.
+
+
+For the 328p:
+
+- The 8-bit digital bank maps D5..D7 to Dig0..Dig2 and B0..B4 to Dig3..Dig7.
+This corresponds to Arduino Uno Dig5..Dig12.
+
+- There is no 16-bit digital bank.
+
+- There are 6 analog channels mapped: ADC0..ADC5. This corresponds to
+Arduino Uno Ain0..Ain5.
+
+
+This is the end of the file.

@@ -21,6 +21,9 @@ These are compiled for two targets:
 * Workstation targets that are configured to resemble the AVR architectures
 (the `-mXXXX-emu` libraries).
 
+NOTE - This needs a user manual, but doesn't yet have one. See the
+`SynchBox` and `DigiBox` projects for nontrivial sample code in the meantime.
+
 
 ## Using the Libraries
 
@@ -54,19 +57,46 @@ of your sources:
 `-lneurapp-mXXXX-emu -lneur-mXXXX-emu`
 
 
+## Folders
+
+Folders with files that you need in order to use the firmware:
+
+* `include` - Headers.
+* `lib` - Library binaries.
+
+Folders with files that you can read to help with using the firmware:
+
+* `testing` - Test code (small stand-alone applications).
+
+Folders with files that you might want to read before modifying the firmware:
+
+* `datasheets` - Vendor-supplied datasheets.
+* `notes` - Various notes that are useful if you're planning to modify the
+firmware code.
+
+Folders with the firmware code itself:
+
+* `core` - Code that's hardware-independent.
+* `emulation` - Hardware-specific code for compiling for use on workstations
+(to test applications in an environment that has a debugger).
+* `m2560` - Hardware-specific code for the ATmega2560, used in the Arduino
+Mega 2560 board.
+* `m328p` - Hardware-specific code for the ATmega328P, used in the Arduino
+Uno board.
+* `skeleton-oo` - Implementation of the application framework.
+
 
 ## Rebuilding the Libraries
-
 
 To rebuild everything:
 
 ./do-rebuild.sh
 
-This removes and replaces everything in "include" and "lib".
+This removes and replaces everything in `include` and `lib`.
 
-The project files are in "core" and "mXXXX". Only edit them if you're
+The project files are in `core` and `mXXXX`. Only edit them if you're
 intimately familiar with bare-metal AVR programming and have the datasheets
 handy.
 
 
-_This is the end of the file._
+_(This is the end of the file.)_

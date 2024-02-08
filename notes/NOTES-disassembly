@@ -1,0 +1,14 @@
+For disassembly:
+
+avr-objdump -s foo.hex > foo.hexdump
+avr-objdump -D foo.hex > foo.asm  (forces interpretation as code)
+
+avr-objdump -d foo.elf > foo.asm  (clean and symbol-annotated)
+
+
+To get call patterns:
+
+grep -f patterns.txt foo.asm
+
+patterns.txt has one pattern per line; using "0000" and "call" worked 
+for getting entrypoints (listed by address) and calls.

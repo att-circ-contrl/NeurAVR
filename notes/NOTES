@@ -1,0 +1,4 @@
+There's an up-to-date datasheet that includes te 328, but Atmel's new format
+makes it eight times the size (33 megabytes).
+
+Flash is 32k, eeprom is 1k (instead of 512 bytes), SRAM is 2k (instead of 1k).
